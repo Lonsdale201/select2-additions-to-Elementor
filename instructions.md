@@ -35,7 +35,7 @@ Now copy and paste the following codes(if you need the language file, you can us
 Don't forget to replace my field name with yours(#city_selector).
 Now it's time for inicilisation, without parameters for now:
 
-
+```javascript
 <script>
 	jQuery(document).ready(function($) {
   $("#city_selector").select2({  	
@@ -43,7 +43,7 @@ Now it's time for inicilisation, without parameters for now:
 });
 
 </script>
-
+```
 
 3, The third step will be parameterisation.
 Select2 can be supplied with several parameters. By default, you get a search box that reacts to the content within the select elements. 
@@ -58,7 +58,7 @@ https://select2.org/searching
 How does it look if we have placed several parameters in the code? 
 Here is a complete example:
 
-
+```javascript
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/i18n/en.js"></script> 
@@ -73,14 +73,14 @@ Here is a complete example:
 });
 
 </script>
-
+```
 
 4, Multiselect
 Select2 will know if it's a select that is multiple based, so you basically don't need to add to the code (by default)
 
 However, unlike single, with multi select you have to exclude the viewfinder a little differently if you don't need it:
 // Exclude the search box
-
+```javascript
 jQuery(document).ready(function($) {
   $("#city_selector").select2();
   
@@ -89,10 +89,11 @@ jQuery(document).ready(function($) {
     $searchfield.prop('disabled', true);
   });
 });
-
+```
 
 Since select contains a generated placeholder by default and includes it, if you want to remove it, define the placeholder by default and then exclude it:
 It is important to remove the placeholder text in the jetformbuilder if you have left it in!
+```javascript
 jQuery(document).ready(function($) {
   $("#city_selector").select2({
     placeholder: "Select a city",
@@ -104,7 +105,7 @@ jQuery(document).ready(function($) {
     $searchfield.prop('disabled', true);
   });
   
-  
+```  
 5, Additions parameters:
 
   The good news is that you can limit how much they can select with the following parameter:
@@ -112,7 +113,7 @@ jQuery(document).ready(function($) {
   
   
   So the whole code will look something like this:
-  
+  ```javascript
   <script>
 jQuery(document).ready(function($) {
   $("#city_selector").select2({
@@ -127,7 +128,7 @@ jQuery(document).ready(function($) {
   });
 });
 </script>
-
+```
 
 ------
 
@@ -136,7 +137,7 @@ Let's look at an example where 3 select re's are connected to select2.
 From this you will know later on how to connect more in the right structure and parameterize them:
 
 
-
+```javascript
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/i18n/en.js"></script> 
@@ -171,7 +172,7 @@ jQuery(document).ready(function($) {
 });
 
 </script>
-
+```
 
 
 
