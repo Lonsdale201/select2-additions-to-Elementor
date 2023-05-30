@@ -228,7 +228,7 @@ Write this under the script tags, so you have the select2 jquery code and your s
 5. Could I put some kind of icon in front of each element, maybe?
 Yes, this is called a template, here is a JFB compatible example:
 This puts a + icon in front of each option.
-
+```javascript
 jQuery(document).ready(function($) {
 // basic FA template
 
@@ -251,4 +251,4 @@ var template = function(state) {
   });
 });
 
-
+```
