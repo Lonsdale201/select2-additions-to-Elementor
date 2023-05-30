@@ -1,7 +1,7 @@
 Integrate select2 for the JetFormbuilder, Elementor, and JetSmartFilter
 Offical site: https://select2.org/
 
-JETFORMBUILDER VERSION
+**JETFORMBUILDER VERSION
 
 1, First step we need select2. You don't need to install it at the file level, it's enough to use some kind of cdn link:
 
@@ -31,7 +31,8 @@ Now copy and paste the following codes(if you need the language file, you can us
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/i18n/en.js"></script>
 
 
-2, The second step will be initialisation
+**2, The second step will be initialisation
+
 Don't forget to replace my field name with yours(#city_selector).
 Now it's time for inicilisation, without parameters for now:
 
@@ -45,7 +46,8 @@ Now it's time for inicilisation, without parameters for now:
 </script>
 ```
 
-3, The third step will be parameterisation.
+**3, The third step will be parameterisation.
+
 Select2 can be supplied with several parameters. By default, you get a search box that reacts to the content within the select elements. 
 
 Disable the search function: minimumResultsForSearch: Infinity
@@ -75,7 +77,8 @@ Here is a complete example:
 </script>
 ```
 
-4, Multiselect
+**4, Multiselect
+
 Select2 will know if it's a select that is multiple based, so you basically don't need to add to the code (by default)
 
 However, unlike single, with multi select you have to exclude the viewfinder a little differently if you don't need it:
@@ -106,7 +109,7 @@ jQuery(document).ready(function($) {
   });
   
 ```  
-5, Additions parameters:
+**5, Additions parameters:
 
   The good news is that you can limit how much they can select with the following parameter:
   maximumSelectionLength: 3
@@ -176,7 +179,7 @@ jQuery(document).ready(function($) {
 
 
 
-FAQ
+**FAQ
 
 1. Bad dropdown results, place empty items in the multiselect:
 
