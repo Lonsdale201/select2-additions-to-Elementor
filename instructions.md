@@ -189,12 +189,14 @@ and you get the following error (image): https://prnt.sc/PlqltmwHU0xX
 
 
 The following code will remove the empty items from the select.
+
+```
 // remove the empty items
 $('#city_selector option[value=""]').remove();
-
+```
 
 2. How can i disable the select2 on mobile?
-
+```
 jQuery(document).ready(function($) {
 		$('#wp_posts').select2({
 	});
@@ -202,7 +204,7 @@ jQuery(document).ready(function($) {
  $("#wp_posts").select2('destroy');
 }
  });	
-
+```
 3. Can I create a hierarchical display?
 
 Select2 supports it but JFB doesn't, so it would be a real pain to do this.
@@ -216,18 +218,19 @@ Of course, unlike the traditional browser-rendered select field, you can customi
 You will find all classes. Use devtools to find the classes.
 
 I suggest, if you are using Elementor custom code, that you open a new tag in the same place where you define select2:
-
+```
 <style>
 .select2-container--default .select2-results>.select2-results__options {
 	color: black;
 	}
 </style>
-
+```
 Write this under the script tags, so you have the select2 jquery code and your stylistic code in one place.
 
 5. Could I put some kind of icon in front of each element, maybe?
 Yes, this is called a template, here is a JFB compatible example:
 This puts a + icon in front of each option.
+
 ```javascript
 jQuery(document).ready(function($) {
 // basic FA template
